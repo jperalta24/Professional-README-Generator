@@ -11,12 +11,17 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'write a table of contents for the project',
-        name: 'table_of_contents',
+        message: 'give a short description of what the application does',
+        name: 'description',
     },
+    // {
+    //     type: 'input',
+    //     message: 'write a table of contents for the project',
+    //     name: 'table_of_contents',
+    // },
     {
         type: 'input',
-        message: 'how do you install this application',
+        message: 'how do you install this application(optional)',
         name: 'installation',
     },
     {
@@ -33,8 +38,28 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'how do you use this application',
+        message: 'Provide instructions for use of this application',
         name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'Explain how users can contribute to this application',
+        name: 'contributing',
+    },
+    {
+        type: 'input',
+        message: 'Provide a test of your application, and explain how to test(Optional)',
+        name: 'test',
+    },
+    {
+        type: 'input',
+        message: 'Enter your GitHub username',
+        name: 'userName',
+    },
+    {
+        type: 'input',
+        message: 'enter your email address',
+        name: 'email',
     },
 
 
