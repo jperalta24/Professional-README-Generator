@@ -75,7 +75,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer
+    // passes questions array to inquirer
         .prompt(questions)
+        // then the name of the file and data is passed to the writeToFile function 
         .then(data => {
             console.log(data)
             writeToFile('README.md', data);

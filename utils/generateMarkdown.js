@@ -2,6 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'None') {
+    // returns link that takes in answer from inquirer prompt named license
     return `![Badge](https://img.shields.io/badge/License-${license}-yellow.svg)`
   };
   return ``
@@ -11,6 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'None') {
+    // returns link to the license section of the readme
   return `- [License](#license)`
   };
   return ``
@@ -19,12 +21,14 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  // returns the type of license used for this readme
   return `## License
   This application is covered by the ${license} license`
   
 }
 
 // TODO: Create a function to generate markdown for README
+//data passed from the writeToFile function is used to generate README file.
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
@@ -37,7 +41,7 @@ function generateMarkdown(data) {
 - [Usage](#usage)
  ${renderLicenseLink(data.license)}
 - [Contributing](#contributing)
-- [Tests](#tests)
+- [Test](#test)
 - [Questions](#questions)
 
 ## Installation
@@ -49,6 +53,7 @@ ${data.installation}
 ${data.usage}
 
 ${renderLicenseSection(data.license)}
+---
 
 ## Contributing
 
@@ -63,6 +68,7 @@ ${data.test}
 If you have any questions, please email me at: [${data.email}](mailto:${data.email})
 
 Find me on Github at [${data.userName}](https://github.com/${data.userName})
+
 `;
 }
 
